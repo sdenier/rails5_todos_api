@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   post 'signup', to: 'users#create'
 
-  resources :todos do
-    resources :items
+  scope module: :v1, constraints: ApiVersion.new('v1', true) do
+    resources :todos do
+      resources :items
+    end
   end
 end

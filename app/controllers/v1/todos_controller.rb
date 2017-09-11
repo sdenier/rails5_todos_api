@@ -1,4 +1,4 @@
-class TodosController < ApplicationController
+class V1::TodosController < ApplicationController
 
   before_action :find_todo, only: [:show, :update, :destroy]
 

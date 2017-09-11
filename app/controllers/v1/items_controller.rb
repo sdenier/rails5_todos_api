@@ -1,4 +1,4 @@
-class ItemsController < ApplicationController
+class V1::ItemsController < ApplicationController
 
   before_action :find_todo
   before_action :find_item, only: [:show, :update, :destroy]
